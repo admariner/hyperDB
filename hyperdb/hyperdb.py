@@ -22,10 +22,7 @@ def get_embedding(documents, key=None, model="text-embedding-ada-002"):
         if isinstance(documents[0], dict):
             texts = []
             if isinstance(key, str):
-                if "." in key:
-                    key_chain = key.split(".")
-                else:
-                    key_chain = [key]
+                key_chain = key.split(".") if "." in key else [key]
                 for doc in documents:
                     for key in key_chain:
                         doc = doc[key]

@@ -5,9 +5,7 @@ from hyperdb import HyperDB
 documents = []
 
 with open("demo/pokemon.jsonl", "r") as f:
-    for line in f:
-        documents.append(json.loads(line))
-
+    documents.extend(json.loads(line) for line in f)
 # Instantiate HyperDB with the list of documents and the key "description"
 db = HyperDB(documents, key="info.description")
 
@@ -33,14 +31,13 @@ def format_entry(pokemon):
     weakness = info["weakness"]
     description = info["description"]
 
-    pretty_pokemon = f"""Name: {name}
+    return f"""Name: {name}
 Pokedex ID: {pokedex_id}
 HP: {hp}
 Type: {pkm_type}
 Weakness: {weakness}
 Description: {description}
 """
-    return pretty_pokemon
 
 # Print the top 5 most similar Pokémon descriptions
 for result in results:

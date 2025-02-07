@@ -3,7 +3,7 @@
 <img src="https://github.com/jdagdelen/hyperDB/blob/main/_static/logo.png?raw=true" width="400" alt="HyperDB Logo">
 </div>
 
-A hyper-fast local vector database for use with LLM Agents. 
+A hyper-fast local vector database for use with LLM Agents. Not entirely a joke.
 
 Want to invest? [Now accepting SAFEs ($135M cap minimum.)](https://www.youtube.com/watch?v=QH2-TGUlwu4)
 
